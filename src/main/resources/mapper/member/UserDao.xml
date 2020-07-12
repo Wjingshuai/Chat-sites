@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zy.qnl.modules.member.dao.UserDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.zy.qnl.modules.member.entity.UserEntity" id="userMap">
+        <result property="userId" column="user_id"/>
+        <result property="username" column="username"/>
+        <result property="mobile" column="mobile"/>
+        <result property="password" column="password"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+    <!-- 根据ID用户 -->
+    <select id="queryByUserId" resultType="com.zy.qnl.modules.member.entity.UserEntity">
+		select * from user_role where ur.user_id = #{userId}
+	</select>
+
+    <!-- 根据名称查用户 -->
+    <select id="queryByUserName" resultType="com.zy.qnl.modules.member.entity.UserEntity">
+		select * from sys_user where username = #{username}
+	</select>
+</mapper>

@@ -1,0 +1,81 @@
+##ignore this file##
+/target/
+.classpath
+.project
+.idea
+.settings
+logs
+
+ ##filter databfile、sln file##
+*.iml
+*.mdb
+*.ldb
+*.sln
+##class file##
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# compression file
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.via
+*.tmp
+*.err
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+#-------------------------------------------------------------------
+
+#说明：
+#
+#/target/ ：过滤文件设置，表示过滤这个文件夹
+#
+#*.jar  ，*.tar  ，*.class 表示过滤某种类型的文件
+#
+#/mtk/do.c ，/mtk/if.h  表示指定过滤某个文件下具体文件
+#
+# !*.c , !/dir/subdir/     !开头表示不过滤
+#
+# *.[oa]    支持通配符：过滤repo中所有以.o或者.a为扩展名的文件
+
+
+#*.a       # 忽略所有 .a 结尾的文件
+#!lib.a    # 但 lib.a 除外
+#/TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+#build/    # 忽略 build/ 目录下的所有文件
+#doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+
+#.gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交：
+#输入：
+#git rm -r –cached filePath
+#git commit -m “remove xx”
+#或者：
+#git rm -r –cached .
+#git add .
+#git commit -m “update .gitignore”
+#
+#来解释下几个参数 -r 是删除文件夹及其子目录 –cached 是删除暂存区里的文件而不删除工作区里的文件，第一种是删除某个文件，第二种方法就把所有暂存区里的文件删了，再加一遍，相当于更新了一遍。
