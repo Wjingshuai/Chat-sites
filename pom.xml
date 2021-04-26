@@ -23,7 +23,7 @@
         <mybatisplus.version>2.2.0</mybatisplus.version>
         <shiro.version>1.4.0</shiro.version>
         <joda.time.version>2.9.9</joda.time.version>
-        <commons.io.version>2.5</commons.io.version>
+        <commons.io.version>2.7</commons.io.version>
         <kaptcha.version>0.0.9</kaptcha.version>
     </properties>
 
